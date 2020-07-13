@@ -5,18 +5,26 @@ Widget MyAppBar(){
   return AppBar(
     title: Row(
       mainAxisAlignment: MainAxisAlignment.center,
+
       children: <Widget>[
         Text(
-          "Flutter",
-          style:
-          TextStyle(color: Colors.black87, fontWeight: FontWeight.w600),
-        ),
+
+            "Flutter",
+            style:
+            TextStyle(color: Colors.black87, fontWeight: FontWeight.w600),
+          ),
         Text(
-          "News",
-          style: TextStyle(color: Colors.blue, fontWeight: FontWeight.w600),
-        )
+            "News",
+            style: TextStyle(color: Colors.blue, fontWeight: FontWeight.w600),
+          ),
+
       ],
     ),
+    actions: <Widget>[
+      Container(
+          padding: EdgeInsets.symmetric(horizontal: 16),
+          child: Icon(Icons.share,))
+    ],
     backgroundColor: Colors.transparent,
     elevation: 0.0,
   );
