@@ -32,6 +32,9 @@ dependencies:
   cached_network_image: ^2.2.0
   webview_flutter: ^0.3.22
   intro_views_flutter: ^2.8.1
+  animated_text_kit: ^2.2.0
+  google_fonts: ^1.1.0
+  flutter_spinkit: ^4.1.2
 
 dev_dependencies:
   flutter_test:

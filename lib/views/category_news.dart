@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:newsapp/helper/news.dart';
 import 'package:newsapp/helper/widget.dart';
+import 'package:newsapp/styles/loading.dart';
 
 class CategoryNews extends StatefulWidget {
 
@@ -61,9 +62,7 @@ class _CategoryNewsState extends State<CategoryNews> {
         backgroundColor: Colors.transparent,
         elevation: 0.0,
       ),
-      body: _loading ? Center(
-        child: CircularProgressIndicator(),
-      ) : SingleChildScrollView(
+      body: _loading ? Loading() : SingleChildScrollView(
         child: Container(
           child: Container(
             margin: EdgeInsets.only(top: 16),

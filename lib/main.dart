@@ -3,8 +3,89 @@ import 'package:flutter/material.dart';
 import 'package:newsapp/views/home.dart';
 import 'package:intro_views_flutter/intro_views_flutter.dart';
 import 'package:intro_views_flutter/Models/page_view_model.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(StartUp());
+
+class StartUp extends StatefulWidget {
+  @override
+  _StartUpState createState() => _StartUpState();
+}
+
+class _StartUpState extends State<StartUp> with SingleTickerProviderStateMixin {
+  AnimationController controllerBG;
+  Animation animationBG;
+
+  @override
+  void initState() {
+    super.initState();
+
+    // After 2 seconds, go to login screen
+    Future.delayed(
+        const Duration(seconds: 5),
+            () => Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => MyApp()),
+        ));
+
+    // BG Animation
+    controllerBG =
+        AnimationController(duration: Duration(seconds: 5), vsync: this);
+    animationBG = ColorTween(
+        begin: Colors.pink,
+        end: Colors.blue) // Tween changes range of animation
+        .animate(controllerBG);
+    controllerBG.forward();
+    controllerBG.addListener(() {
+      setState(() {});
+    });
+  }
+
+  @override
+  void dispose() {
+    controllerBG.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: animationBG.value,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          SizedBox(
+            height: 80,
+            width: double.infinity,
+            child: Center(
+              child: Text(
+                'HelloNews',
+                style: GoogleFonts.lobster(
+                    textStyle: TextStyle(
+                      color: Colors.white,
+                      fontSize: 50.0,
+                      fontWeight: FontWeight.w400,
+                    )),
+                textAlign: TextAlign.center,
+              ),
+            ),
+          ),
+          TypewriterAnimatedTextKit(
+            text: ['YOUR 24x7 NEWS REPORTER'],
+            textAlign: TextAlign.center,
+            textStyle: TextStyle(
+              color: Colors.white,
+              fontSize: 15.0,
+              fontWeight: FontWeight.w200,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.

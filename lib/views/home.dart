@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:newsapp/helper/data.dart';
 import 'package:newsapp/helper/widget.dart';
 import 'package:newsapp/models/category_model.dart';
+import 'package:newsapp/styles/loading.dart';
 import 'package:newsapp/views/category_news.dart';
 import 'package:newsapp/helper/news.dart';
 
@@ -43,9 +44,7 @@ class _HomePageState extends State<HomePage> {
       appBar: MyAppBar(),
       body: SafeArea(
         child: _loading
-            ? Center(
-          child: CircularProgressIndicator(),
-        )
+            ? Loading()
             : SingleChildScrollView(
           child: Container(
             child: Column(
