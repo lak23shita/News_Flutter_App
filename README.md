@@ -1,4 +1,4 @@
-# newsapp
+# HelloNews
 
 A new Flutter application.
 
