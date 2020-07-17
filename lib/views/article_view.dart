@@ -23,7 +23,7 @@ class _ArticleViewState extends State<ArticleView> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              "Flutter",
+              "Hello",
               style:
               TextStyle(color: Colors.black87, fontWeight: FontWeight.w600),
             ),

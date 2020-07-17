@@ -41,7 +41,7 @@ class _CategoryNewsState extends State<CategoryNews> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              "Flutter",
+              "Hello",
               style:
               TextStyle(color: Colors.black87, fontWeight: FontWeight.w600),
             ),

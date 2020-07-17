@@ -114,7 +114,7 @@ class _IntroState extends State<Intro> {
     PageViewModel(
         pageColor: Colors.blue,
         // iconImageAssetPath: 'assets/air-hostess.png',
-        bubble: Image.asset('assets/peoplenews.jpg'),
+        bubble: Image.asset('assets/people1.png'),
         body: Container(
           margin: EdgeInsets.only(bottom: 50),
           child: Text(
@@ -139,16 +139,16 @@ class _IntroState extends State<Intro> {
         titleTextStyle: TextStyle( color: Colors.white),
         bodyTextStyle: TextStyle( color: Colors.white),
         mainImage: Image.asset(
-          'assets/peoplenews.jpg',
-          height: 285.0,
-          width: 285.0,
+          'assets/people1.png',
+          height: 340.0,
+          width: 340.0,
           alignment: Alignment.center,
         )
     ),
 
     PageViewModel(
       pageColor: Colors.blue,
-      iconImageAssetPath: 'assets/laptop.jpg',
+      iconImageAssetPath: 'assets/laptop1.png',
       body: Container(
         margin: EdgeInsets.only(bottom: 50),
         child: Text(
@@ -167,9 +167,9 @@ class _IntroState extends State<Intro> {
         ),),
 
       mainImage: Image.asset(
-        'assets/laptop.jpg',
-        height: 285.0,
-        width: 285.0,
+        'assets/laptop1.png',
+        height: 340.0,
+        width: 340.0,
         alignment: Alignment.center,
       ),
       titleTextStyle: TextStyle(color: Colors.white),
@@ -178,7 +178,7 @@ class _IntroState extends State<Intro> {
 
     PageViewModel(
       pageColor: Colors.blue,
-      iconImageAssetPath: 'assets/health.jpg',
+      iconImageAssetPath: 'assets/health1.png',
       body: Container(
         margin: EdgeInsets.only(bottom: 50),
         child: Text(
@@ -196,41 +196,12 @@ class _IntroState extends State<Intro> {
         ),),
 
       mainImage: Image.asset(
-        'assets/health.jpg',
-        height: 285.0,
-        width: 285.0,
+        'assets/health1.png',
+        height: 300.0,
+        width: 300.0,
         alignment: Alignment.center,
       ),
       titleTextStyle: TextStyle( color: Colors.white),
-      bodyTextStyle: TextStyle( color: Colors.white),
-    ),
-
-    PageViewModel(
-      pageColor: Colors.blue,
-      iconImageAssetPath: 'assets/tech.png',
-      body: Container(
-        margin: EdgeInsets.only(bottom: 50),
-        child: Text(
-          'Improved and advanced business strategies for upgrading and establishing greater market position.',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            fontSize: 18,
-
-          ),
-        ),
-      ),
-      title: Text('Technology',
-        style: TextStyle(
-          fontWeight: FontWeight.bold,
-          fontSize: 35,
-        ),),
-      mainImage: Image.asset(
-        'assets/tech.png',
-        height: 285.0,
-        width: 285.0,
-        alignment: Alignment.center,
-      ),
-      titleTextStyle: TextStyle(color: Colors.white),
       bodyTextStyle: TextStyle( color: Colors.white),
     ),
   ];
